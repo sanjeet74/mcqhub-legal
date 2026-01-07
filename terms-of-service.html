@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - MCQ Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .last-updated {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .section {
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .section-icon {
+            font-size: 1.5rem;
+        }
+
+        .section h2 {
+            color: #11998e;
+            font-size: 1.4rem;
+        }
+
+        .section p {
+            margin-bottom: 12px;
+            color: #555;
+        }
+
+        .section ul {
+            margin: 12px 0;
+            padding-left: 20px;
+        }
+
+        .section li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .subsection {
+            background: #f0fdf4;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border-left: 4px solid #11998e;
+        }
+
+        .subsection h3 {
+            color: #333;
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .subsection ul {
+            margin: 8px 0 0 0;
+        }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 15px 0;
+        }
+
+        .warning-box h3 {
+            color: #92400e;
+            margin-bottom: 8px;
+        }
+
+        .warning-box p, .warning-box li {
+            color: #92400e;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .contact-box h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .contact-box a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 25px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .contact-box a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+            opacity: 0.8;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        .do-dont-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .do-box {
+            background: #dcfce7;
+            border-left: 4px solid #22c55e;
+            padding: 15px;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .do-box h4 {
+            color: #166534;
+            margin-bottom: 10px;
+        }
+
+        .do-box li {
+            color: #166534;
+        }
+
+        .dont-box {
+            background: #fee2e2;
+            border-left: 4px solid #ef4444;
+            padding: 15px;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .dont-box h4 {
+            color: #991b1b;
+            margin-bottom: 10px;
+        }
+
+        .dont-box li {
+            color: #991b1b;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .content {
+                padding: 25px;
+                border-radius: 15px;
+            }
+
+            .section h2 {
+                font-size: 1.2rem;
+            }
+
+            .do-dont-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 MCQ Hub</h1>
+            <p>Terms of Service</p>
+            <div class="last-updated">Last Updated: December 25, 2025</div>
+        </header>
+
+        <div class="content">
+            <!-- Acceptance of Terms -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="section-icon">✅</span>
+                    <h2>Acceptance of Terms</h2>
+                </div>
+                <p>Welcome to <strong>MCQ Hub</strong>! These Terms of Service ("Terms") govern your use of our mobile application and services.</p>
+                <p>By downloading, installing, or using MCQ Hub, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use the app.</p>
+                <p>We may update these Terms from time to time. Continued use of the app after changes constitutes acceptance of the modified Terms.</p>
+            </div>
+
+            <!-- Eligibility -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="section-icon">👤</span>
+                    <h2>Eligibility</h2>
+                </div>
+                <p>MCQ Hub is available to users of all ages for educational purposes.</p>
+                <p>If you are under 13 years of age, you must have parental consent to use this app.</p>
+                <p>By using the app, you represent that you have the legal capacity to enter into these Terms or have obtained necessary parental/guardian consent.</p>
+            </div>
+
+            <!-- User Accounts -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="section-icon">🔐</span>
+                    <h2>User Accounts</h2>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Account Creation</h3>
+                    <p>You may need to create an account to access certain features. You are responsible for maintaining the confidentiality of your account credentials.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>Account Security</h3>
+                    <p>You are responsible for all activities that occur under your account. Notify us immediately of any unauthorized use.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>Accurate Information</h3>
+                    <p>You agree to provide accurate, current, and complete information during registration and keep it updated.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>One Account Per User</h3>
+                    <p>You may only create and maintain one account. Multiple accounts may be terminated.</p>
+                </div>
+            </div>
+
+            <!-- Acceptable Use -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="section-icon">📋</span>
+                    <h2>Acceptable Use</h2>
+                </div>
+                <p>You agree to use the app only for lawful purposes and in accordance with these Terms.</p>
+                
+                <div class="do-dont-container">
+                    <div class="do-box">
+                        <h4>✅ You May:</h4>
+                        <ul>
+                            <li>Use the app for personal, educational purposes</li>
+                            <li>Participate in quizzes and challenges</li>
+                            <li>Share your achievements on social media</li>
+                            <li>Provide feedback and suggestions</li>
+                            <li>Invite friends via referral system</li>
+                        </ul>
+                    </div>
+                    <div class="dont-box">
+                        <h4>❌ You May NOT:</h4>
+                        <ul>
+                            <li>Use the app for any illegal purpose</li>
+                            <li>Attempt to hack or reverse engineer the app</li>
+                            <li>Create fake accounts or impersonate others</li>
+                            <li>Share inappropriate or offensive content</li>
+                            <li>Use automated systems or bots</li>
+                            <li>Exploit bugs for unfair advantage</li>
+                            <li>Harass or bully other users</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content & Intellectual Property -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="section-icon">©️</span>
+                    <h2>Content & Intellectual Property</h2>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Our Content</h3>
+                    <p>All content in the app including questions, images, design, and code is owned by us or our licensors and protected by intellectual property laws.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>User Content</h3>
+                    <p>If you submit questions or content, you grant us a non-exclusive, worldwide, royalty-free license to use, modify, and display that content.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>Restrictions</h3>
+                    <p>You may not copy, distribute, modify, or create derivative works from our content without written permission.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>Trademarks</h3>
+                    <p>MCQ Hub and our logo are trademarks. You may not use them without our prior written consent.</p>
+                </div>
+            </div>
+
+            <!-- Quizzes & Gameplay -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="section-icon">🎮</span>
+                    <h2>Quizzes & Gameplay</h2>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Fair Play</h3>
+                    <p>You agree to play fairly and not use any cheats, hacks, or unfair methods to gain advantages.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>Leaderboards</h3>
+                    <p>Leaderboard rankings are based on quiz performance. We reserve the right to remove scores obtained through unfair means.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>Accuracy of Questions</h3>
+                    <p>While we strive for accuracy, we do not guarantee that all questions and answers are error-free. Report any errors you find.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>Daily Challenges</h3>
+                    <p>Daily challenges reset at midnight (local time). Streaks may be affected by app unavailability.</p>
+                </div>
+            </div>
+
+            <!-- Virtual Items & Rewards -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="section-icon">🪙</span>
+                    <h2>Virtual Items & Rewards</h2>
+                </div>
+                
+                <div class="warning-box">
+                    <h3>⚠️ Important Notice</h3>
+                    <p>Coins and other virtual items have <strong>no real-world monetary value</strong> and cannot be exchanged for cash.</p>
+                </div>
+
+                <ul>
+                    <li><strong>Rewards</strong> - Rewards are provided at our discretion and may be modified or discontinued at any time.</li>
+                    <li><strong>No Refunds</strong> - Virtual items and rewards are non-refundable and non-transferable.</li>
+                    <li><strong>Loss of Items</strong> - We are not responsible for loss of virtual items due to account termination or technical issues.</li>
+                    <li><strong>Referral Rewards</strong> - Referral bonuses are subject to verification and may be revoked if abuse is detected.</li>
+                </ul>
+            </div>
+
+            <!-- Advertisements -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="section-icon">📢</span>
+                    <h2>Advertisements</h2>
+                </div>
+                <p>MCQ Hub displays advertisements to support the free version of the app.</p>
+                <ul>
+                    <li>Ads are served by Google AdMob and other advertising partners</li>
+                    <li>We are not responsible for the content of third-party advertisements</li>
+                    <li>Clicking on ads is at your own risk; we don't endorse advertised products</li>
+                    <li>You may see rewarded ads to earn virtual coins or unlock features</li>
+                </ul>
+            </div>
+
+            <!-- Privacy -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="section-icon">🔒</span>
+                    <h2>Privacy</h2>
+                </div>
+                <p>Your use of MCQ Hub is also governed by our Privacy Policy, which describes how we collect, use, and protect your personal information.</p>
+                <p>By using the app, you consent to the collection and use of information as described in our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+            </div>
+
+            <!-- Disclaimers -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="section-icon">⚠️</span>
+                    <h2>Disclaimers</h2>
+                </div>
+                
+                <div class="warning-box">
+                    <h3>Service Provided "As Is"</h3>
+                    <ul>
+                        <li>MCQ Hub is provided "as is" without warranties of any kind</li>
+                        <li>We do not guarantee uninterrupted or error-free service</li>
+                        <li>Educational content is for learning purposes and may contain errors</li>
+                        <li>We are not responsible for any decisions made based on quiz content</li>
+                    </ul>
+                </div>
+
+                <p><strong>No Professional Advice:</strong> Content in MCQ Hub is for educational purposes only and should not be considered professional, academic, or expert advice.</p>
+            </div>
+
+            <!-- Limitation of Liability -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="section-icon">⚖️</span>
+                    <h2>Limitation of Liability</h2>
+                </div>
+                <p>To the maximum extent permitted by law:</p>
+                <ul>
+                    <li>We are not liable for any indirect, incidental, special, or consequential damages</li>
+                    <li>Our total liability shall not exceed the amount you paid us (if any) in the past 12 months</li>
+                    <li>We are not responsible for third-party content, links, or services</li>
+                    <li>We are not liable for any loss of data, virtual items, or account access</li>
+                </ul>
+            </div>
+
+            <!-- Termination -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="section-icon">🚫</span>
+                    <h2>Termination</h2>
+                </div>
+                
+                <div class="subsection">
+                    <h3>By You</h3>
+                    <p>You may stop using the app at any time. You can request account deletion through the app settings or by contacting us.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>By Us</h3>
+                    <p>We reserve the right to suspend or terminate your account if you violate these Terms, engage in fraudulent activity, or for any other reason at our discretion.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>Effect of Termination</h3>
+                    <p>Upon termination, your right to use the app ceases immediately. Any virtual items, coins, or progress will be forfeited.</p>
+                </div>
+            </div>
+
+            <!-- Governing Law -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="section-icon">🏛️</span>
+                    <h2>Governing Law</h2>
+                </div>
+                <p>These Terms shall be governed by and construed in accordance with the laws of India, without regard to conflict of law principles.</p>
+                <p>Any disputes arising from these Terms or your use of the app shall be resolved through arbitration or in the courts of India.</p>
+            </div>
+
+            <!-- Changes to Terms -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="section-icon">📝</span>
+                    <h2>Changes to Terms</h2>
+                </div>
+                <p>We may modify these Terms at any time. We will notify you of significant changes by:</p>
+                <ul>
+                    <li>Posting a notice in the app</li>
+                    <li>Updating the "Last Updated" date</li>
+                    <li>Sending an email notification for major changes</li>
+                </ul>
+                <p>Your continued use of the app after changes constitutes acceptance of the updated Terms.</p>
+            </div>
+
+            <!-- Severability -->
+            <div class="section">
+                <div class="section-header">
+                    <span class="section-icon">📄</span>
+                    <h2>Severability</h2>
+                </div>
+                <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.</p>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="section">
+                <div class="contact-box">
+                    <h2>📧 Contact Us</h2>
+                    <p>If you have questions about these Terms of Service, please contact us:</p>
+                    <a href="mailto:support@mcqhub.com">mcqhub1925@gmail.com</a>
+                    <p style="margin-top: 15px; font-size: 0.9rem;">We will respond to your inquiry within 48 hours.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 MCQ Hub. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="privacy-policy.html">Privacy Policy</a> | 
+                <a href="https://play.google.com/store/apps/details?id=com.shwetapriy.mcqhub">Download MCQ Hub</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
